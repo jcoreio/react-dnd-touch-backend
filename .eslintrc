@@ -1,6 +1,6 @@
 {
-  "extends": [
-    "@jedwards1211/eslint-config-typescript",
-    "prettier"
-  ]
+  "extends": ["@jedwards1211/eslint-config-typescript", "prettier"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": 0
+  }
 }
