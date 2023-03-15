@@ -420,11 +420,11 @@ export class TouchBackendImpl implements Backend {
   }
 
   public handleTopMove = (e: TouchEvent | MouseEvent): void => {
-    if (this.timeout) {
-      clearTimeout(this.timeout)
-    }
     if (!this.document || this.waitingForDelay) {
       return
+    }
+    if (this.timeout) {
+      clearTimeout(this.timeout)
     }
     const { moveStartSourceIds, dragOverTargetIds } = this
     const enableHoverOutsideTarget = this.options.enableHoverOutsideTarget
